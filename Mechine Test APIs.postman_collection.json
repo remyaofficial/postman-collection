@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "413c97c5-c377-4e99-87ad-d230f3a3b4de",
+		"name": "Mechine Test APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"remyapr@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "Login Api"
+			},
+			"response": []
+		},
+		{
+			"name": "User Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiI2MGY3ZTM0NTM2ZWJjMDQ2YmMyM2FhNGMiLCJ1c2VySWQiOjEzLCJpYXQiOjE2MjY4NTgzMDksImV4cCI6MTYyNjk0NDcwOX0.PGRcylAuca82XfThC9qSo2r4oeNTtH7OFHXvWiZ_nIg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"me"
+					]
+				},
+				"description": "Get logined user details "
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Remya P R\",\r\n  \"email\": \"remya11@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				},
+				"description": "User registrarion api"
+			},
+			"response": []
+		},
+		{
+			"name": "Login Logs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiI2MGY3ZTM0NTM2ZWJjMDQ2YmMyM2FhNGMiLCJ1c2VySWQiOjEzLCJpYXQiOjE2MjY4NTgzMDksImV4cCI6MTYyNjk0NDcwOX0.PGRcylAuca82XfThC9qSo2r4oeNTtH7OFHXvWiZ_nIg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/user/me/logins",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"me",
+						"logins"
+					]
+				},
+				"description": "User Login Logs"
+			},
+			"response": []
+		}
+	]
+}
